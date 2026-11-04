@@ -19,6 +19,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="vi" suppressHydrationWarning>
       <head>
+        {/* Thêm vào Màn hình chính trên iOS: mở toàn màn hình, thanh trạng thái trong suốt */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <script dangerouslySetInnerHTML={{ __html: THEME_JS }} />
       </head>
       <body className={roboto.className}>
