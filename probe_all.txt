@@ -1,0 +1,176 @@
+﻿######## https://vsmov.com/api
+
+== Phim mß╗¢i cß║¡p nhß║¡t
+   GET https://vsmov.com/api/danh-sach/phim-moi-cap-nhat?page=1
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, items, pathImage, pagination
+   kho├í item ─æß║ºu: tmdb, imdb, modified, _id, name, origin_name, slug, poster_url, thumb_url, year
+   pathImage: https://nguon.vsphim.com/storage/images/
+
+== Phim lß║╗ (v1)
+   GET https://vsmov.com/api/v1/api/danh-sach/phim-le?page=1
+   -> HTTP 404 text/html  (KH├öNG phß║úi JSON: <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</centeΓÇª)
+
+== Phim lß║╗ (kh├┤ng v1)
+   GET https://vsmov.com/api/danh-sach/phim-le?page=1
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, items, pagination | data: undefined | sß╗æ item: 20
+
+== Phim bß╗Ö (v1)
+   GET https://vsmov.com/api/v1/api/danh-sach/phim-bo?page=1
+   -> HTTP 404 text/html  (KH├öNG phß║úi JSON: <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</centeΓÇª)
+
+== Phim bß╗Ö (kh├┤ng v1)
+   GET https://vsmov.com/api/danh-sach/phim-bo?page=1
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, items, pagination | data: undefined | sß╗æ item: 20
+
+== Thß╗â loß║íi (v1)
+   GET https://vsmov.com/api/v1/api/the-loai
+   -> HTTP 404 text/html  (KH├öNG phß║úi JSON: <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</centeΓÇª)
+
+== Thß╗â loß║íi (kh├┤ng v1)
+   GET https://vsmov.com/api/the-loai
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, message, data | mß║½u: {"_id":85,"name":"Action & Adventure","slug":"action-adventure"}
+
+== Quß╗æc gia (v1)
+   GET https://vsmov.com/api/v1/api/quoc-gia
+   -> HTTP 404 text/html  (KH├öNG phß║úi JSON: <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</centeΓÇª)
+
+== Quß╗æc gia (kh├┤ng v1)
+   GET https://vsmov.com/api/quoc-gia
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, message, data | mß║½u: {"_id":20,"name":"ß║ó Rß║¡p X├¬ ├Üt","slug":"a-rap-xe-ut"}
+
+== T├¼m kiß║┐m (v1)
+   GET https://vsmov.com/api/v1/api/tim-kiem?keyword=a&page=1&limit=3
+   -> HTTP 404 text/html  (KH├öNG phß║úi JSON: <html> <head><title>404 Not Found</title></head> <body> <center><h1>404 Not Found</h1></center> <hr><center>nginx</centeΓÇª)
+
+== Chi tiß║┐t phim
+   GET https://vsmov.com/api/phim/duong-trieu-quy-su-luc-phan-2
+   -> HTTP 200 application/json
+   kho├í gß╗æc: status, msg, movie, episodes | status: true
+   kho├í movie: tmdb, imdb, created, modified, _id, name, origin_name, slug, content, type, status, poster_url, thumb_url, trailer_url, time, episode_current, episode_total, quality, lang, notify, showtimes, year, keywords, view, chieurap, sub_docquyen, actor, director, category, country
+   server ─æß║ºu: server_name, server_data
+   tß║¡p ─æß║ºu: {"name":"1","slug":"tap-1","filename":"1","link_embed":"https://v14.streamvsmov.com/video/ba6b078f-482e-4e6f-a90e-824f33d585a1"}
+
+Xong. D├ín to├án bß╗Ö phß║ºn tr├¬n lß║íi cho m├¼nh.
+######## https://nguon.vsphim.com/api
+
+== Phim mß╗¢i cß║¡p nhß║¡t
+   GET https://nguon.vsphim.com/api/danh-sach/phim-moi-cap-nhat?page=1
+   -> HTTP 200 application/json; charset=utf-8
+   kho├í gß╗æc: items, pagination, pathImage, status
+   kho├í item ─æß║ºu: _id, country, episode_current, modified, name, origin_name, poster_url, slug, thumb_url, type, year
+   pathImage: https://nguon.vsphim.com/storage/images/
+
+== Phim lß║╗ (v1)
+   GET https://nguon.vsphim.com/api/v1/api/danh-sach/phim-le?page=1
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | data: undefined | sß╗æ item: 0
+
+== Phim lß║╗ (kh├┤ng v1)
+   GET https://nguon.vsphim.com/api/danh-sach/phim-le?page=1
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | data: undefined | sß╗æ item: 0
+
+== Phim bß╗Ö (v1)
+   GET https://nguon.vsphim.com/api/v1/api/danh-sach/phim-bo?page=1
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | data: undefined | sß╗æ item: 0
+
+== Phim bß╗Ö (kh├┤ng v1)
+   GET https://nguon.vsphim.com/api/danh-sach/phim-bo?page=1
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | data: undefined | sß╗æ item: 0
+
+== Thß╗â loß║íi (v1)
+   GET https://nguon.vsphim.com/api/v1/api/the-loai
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | mß║½u: undefined
+
+== Thß╗â loß║íi (kh├┤ng v1)
+   GET https://nguon.vsphim.com/api/the-loai
+   -> HTTP 200 application/json; charset=utf-8
+   kho├í gß╗æc: data, message, status | mß║½u: {"_id":7144,"name":"","slug":""}
+
+== Quß╗æc gia (v1)
+   GET https://nguon.vsphim.com/api/v1/api/quoc-gia
+   -> HTTP 404 application/json; charset=utf-8
+   kho├í gß╗æc: message, status | mß║½u: undefined
+
+== Quß╗æc gia (kh├┤ng v1)
+   GET https://nguon.vsphim.com/api/quoc-gia
+   -> HTTP 200 application/json; charset=utf-8
+   kho├í gß╗æc: data, message, status | mß║½u: {"_id":114,"name":"","slug":""}
+
+== T├¼m kiß║┐m (v1)
+   GET https://nguon.vsphim.com/api/v1/api/tim-kiem?keyword=a&page=1&limit=3
+   -> HTTP 404 application/json; charset=utf-8
+   sß╗æ item: 0
+
+== Chi tiß║┐t phim
+   GET https://nguon.vsphim.com/api/phim/jur-902-ban-toi-khoe-vo-toi-lam-tinh-voi-vo-anh-ta-20-lan
+   -> HTTP 200 application/json; charset=utf-8
+   kho├í gß╗æc: episodes, movie, msg, status | status: true
+   kho├í movie: _id, actor, category, chieurap, content, country, created, director, episode_current, episode_total, is_copyright, lang, modified, name, notify, origin_name, poster_url, quality, showtimes, slug, status, sub_docquyen, thumb_url, time, trailer_url, type, view, year
+   server ─æß║ºu: server_data, server_name
+   tß║¡p ─æß║ºu: {"filename":"Full","link_embed":"https://sv2.streamvsphim.top/video/539bb817-d9e2-4939-8a64-10c21429dbd2","name":"Full","slug":"full"}
+
+Xong. D├ín to├án bß╗Ö phß║ºn tr├¬n lß║íi cho m├¼nh.
+######## https://topxx.vip/api
+
+== Phim mß╗¢i cß║¡p nhß║¡t
+   GET https://topxx.vip/api/danh-sach/phim-moi-cap-nhat?page=1
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message
+   kho├í item ─æß║ºu: undefined
+   pathImage: undefined
+
+== Phim lß║╗ (v1)
+   GET https://topxx.vip/api/v1/api/danh-sach/phim-le?page=1
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | data: undefined | sß╗æ item: 0
+
+== Phim lß║╗ (kh├┤ng v1)
+   GET https://topxx.vip/api/danh-sach/phim-le?page=1
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | data: undefined | sß╗æ item: 0
+
+== Phim bß╗Ö (v1)
+   GET https://topxx.vip/api/v1/api/danh-sach/phim-bo?page=1
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | data: undefined | sß╗æ item: 0
+
+== Phim bß╗Ö (kh├┤ng v1)
+   GET https://topxx.vip/api/danh-sach/phim-bo?page=1
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | data: undefined | sß╗æ item: 0
+
+== Thß╗â loß║íi (v1)
+   GET https://topxx.vip/api/v1/api/the-loai
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | mß║½u: undefined
+
+== Thß╗â loß║íi (kh├┤ng v1)
+   GET https://topxx.vip/api/the-loai
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | mß║½u: undefined
+
+== Quß╗æc gia (v1)
+   GET https://topxx.vip/api/v1/api/quoc-gia
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | mß║½u: undefined
+
+== Quß╗æc gia (kh├┤ng v1)
+   GET https://topxx.vip/api/quoc-gia
+   -> HTTP 404 application/json
+   kho├í gß╗æc: message | mß║½u: undefined
+
+== T├¼m kiß║┐m (v1)
+   GET https://topxx.vip/api/v1/api/tim-kiem?keyword=a&page=1&limit=3
+   -> HTTP 404 application/json
+   sß╗æ item: 0
+
+Xong. D├ín to├án bß╗Ö phß║ºn tr├¬n lß║íi cho m├¼nh.

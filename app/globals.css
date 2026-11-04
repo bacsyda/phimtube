@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-white text-neutral-900 antialiased; font-family: Roboto, Arial, sans-serif; }
+.dark { color-scheme: dark; }
+.dark body { @apply bg-[#0f0f0f] text-neutral-100; }
+
+/* Thanh trượt âm lượng của trình phát */
+.vol { -webkit-appearance: none; appearance: none; height: 3px; border-radius: 2px; outline: none; cursor: pointer;
+  background: linear-gradient(to right, #fff var(--p), rgba(255,255,255,.3) var(--p)); }
+.vol::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+.vol::-moz-range-thumb { width: 12px; height: 12px; border: 0; border-radius: 50%; background: #fff; }
+
+/* Ngăn kéo menu trên màn hình nhỏ */
+@keyframes slide-in { from { transform: translateX(-100%); } to { transform: none; } }
+.slide-in { animation: slide-in 0.2s ease-out; }
+
+/* Bảng danh sách tập trong player (toàn màn hình) */
+@keyframes slide-in-r { from { transform: translateX(100%); } to { transform: none; } }
+.slide-in-r { animation: slide-in-r 0.2s ease-out; }
